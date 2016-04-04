@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_wclck_layout"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tk.arcane9.worldclockify.WClck_Main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/CurrentTimezone"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="CurrentTimezone" />
+
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="X"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:elevation="10dp"
+        android:stateListAnimator="@null"
+        android:id="@+id/TimeListButton"
+        android:background="@drawable/button_background"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="CurrentDate"
+        android:id="@+id/CurrentDate"
+        android:layout_below="@+id/CurrentTimezone"
+        android:gravity="left"/>
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:format12Hour="hh:mm:ss a"
+        android:id="@+id/CurrentTime"
+        android:gravity="right"
+        android:layout_below="@+id/CurrentTimezone"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_marginTop="21dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2sp"
+        android:id="@+id/world_listView"
+        android:layout_below="@+id/CurrentDate"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
